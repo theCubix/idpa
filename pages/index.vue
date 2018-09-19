@@ -4,7 +4,7 @@
     <h1 class="font-thin text-grey-dark text-5xl text-center my-4">Shops.</h1>
 
     <div
-      class="max-w-sm rounded overflow-hidden shadow-lg mx-auto my-8 bg-white"
+      class="max-w-sm sm:rounded-none rounded overflow-hidden shadow-lg mx-auto my-8 bg-white"
       v-for="record in records"
       :key="record.id"
       v-if="record.fields.Category === 'Published'">
@@ -20,7 +20,7 @@
           class="flex-1"
           v-for="image in record.fields.Image"
           :key="image.id">
-          <img :src="image.url" />
+          <img :src="image.url" class="block" />
         </div>
       </div>
     </div>
